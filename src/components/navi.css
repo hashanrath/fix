@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(60, 99%, 52%);
+    padding: 10px 20px; /* Added consistent padding */
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-left span {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-bell {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bell-icon {
+    font-size: 24px;
+    color: black; /* Ensure the bell icon color is black */
+    margin-bottom: -5px;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .profile-icon {
+    font-size: 22px;
+    margin-right: 5px;
+    color: black; /* Set profile icon color */
+  }
+  
+  .profile span {
+    margin-right: 10px;
+    font-weight: bold;
+    color: black; /* Ensures consistent text color */
+  }
+  
+  .dropdown-arrow {
+    font-size: 33px; /* Adjusted for a more consistent look */
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+  

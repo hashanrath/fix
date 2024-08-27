@@ -1,0 +1,122 @@
+.total-clients-card {
+    background-color: #a1da72;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -600px;
+    margin-left: 300px;
+    position: relative;
+}
+
+.total-clients-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.total-clients-text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.total-clients-icon {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.search-container {
+    margin-top: -120px;
+    margin-left: 900px;
+    text-align: center;
+}
+
+.search-bar {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clients-table-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clients-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    table-layout: fixed;
+}
+
+.clients-table th, .clients-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.clients-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.clients-table tbody {
+    display: block;
+    max-height: 250px; /* Adjust this value to fit 5 rows */
+    overflow-y: auto;
+    width: 100%;
+}
+
+.clients-table thead, .clients-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.clients-table thead {
+    width: calc(100% - 1em); /* Adjust for scrollbar width */
+}
+
+.clients-table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.client-row {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.delete-button {
+    color: red;
+}
+
+.view-button {
+    color: blue;
+}
+
+.clientdetails {
+    margin-top: 100px;
+    margin-left: 120px;
+}
