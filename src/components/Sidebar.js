@@ -20,26 +20,48 @@ function Sidebar() {
                 )}
             </div>
             <ul className="menu-items">
-                <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
-                    <div className="menu-icon">&#128248;</div> {/* Dashboard icon */}
-                    {!isCollapsed && <Link to="/dashboard" className="menu-text" >Dashboard</Link>}
+                <li className="menu-item dashboard"> {/* Add dashboard class here */}
+                    <Link to="/dashboard" className="menu-link">
+                        <div className="menu-icon">&#128248;</div>
+                        <span className="menu-text">Dashboard</span>
+                        {isCollapsed && <span className="tooltip">Dashboard</span>}
+                    </Link>
                 </li>
-                <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
-                    <div className="menu-icon">&#128101;</div> {/* Clients icon */}
-                    {!isCollapsed && <Link to="/client" className="menu-text">Clients</Link>}
+                <li className="menu-item dashboard">
+                    <Link to="/service" className="menu-link">
+                        <div className="menu-icon">&#128736;</div>
+                        <span className="menu-text">Service</span>
+                        {isCollapsed && <span className="tooltip">Service</span>}
+                    </Link>
                 </li>
-                <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
-                    <div className="menu-icon">&#10067;</div> {/* Request icon */}
-                    {!isCollapsed && <Link to="/request" className="menu-text">Request</Link>}
+                <li className="menu-item dashboard">
+                    <Link to="/client" className="menu-link">
+                        <div className="menu-icon">&#128101;</div>
+                        <span className="menu-text">Clients</span>
+                        {isCollapsed && <span className="tooltip">Clients</span>}
+                    </Link>
                 </li>
-                <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
-                    <div className="menu-icon">&#9993;</div> {/* Messages icon */}
-                    {!isCollapsed && <Link to="/message" className="menu-text">Messages</Link>}
+                <li className="menu-item dashboard">
+                    <Link to="/admin" className="menu-link">
+                        <div className="menu-icon">&#9881;</div>
+                        <span className="menu-text">Admin</span>
+                        {isCollapsed && <span className="tooltip">Admin</span>}
+                    </Link>
                 </li>
-                <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
-                    <div className="menu-icon">&#128295;</div> {/* Products icon */}
-                    {!isCollapsed && <Link to="/product" className="menu-text">Products</Link>}
+                <li className="menu-item dashboard">
+                    <Link to="/request" className="menu-link">
+                        <div className="menu-icon">&#10067;</div>
+                        <span className="menu-text">Request</span>
+                        {isCollapsed && <span className="tooltip">Request</span>}
+                    </Link>
                 </li>
+                <li className="menu-item dashboard">
+                    <Link to="/message" className="menu-link">
+                        <div className="menu-icon">&#9993;</div>
+                        <span className="menu-text">Messages</span>
+                        {isCollapsed && <span className="tooltip">Messages</span>}
+                    </Link>
+                </li> 
             </ul>
             <div className="footer-icon">
                 &#128101; &#9881; {/* Footer icon */}
