@@ -22,7 +22,7 @@ function Sidebar() {
             <ul className="menu-items">
                 <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
                     <div className="menu-icon">&#128248;</div> {/* Dashboard icon */}
-                    {!isCollapsed && <Link to="/dashboard" className="menu-text">Dashboard</Link>}
+                    {!isCollapsed && <Link to="/dashboard" className="menu-text" >Dashboard</Link>}
                 </li>
                 <li className={`menu-item ${isCollapsed ? 'collapsed' : ''}`}>
                     <div className="menu-icon">&#128101;</div> {/* Clients icon */}
