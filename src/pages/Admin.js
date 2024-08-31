@@ -3,73 +3,70 @@ import './admin.css';
 import Navi from '../components/Navi';
 import Sidebar from '../components/Sidebar';
 
-export default function Client() {
-    const [clients, setClients] = useState([
-        { name: 'John Doe', tpNumber: '123-456-789' },
-        { name: 'Jane Smith', tpNumber: '987-654-321' },
-        { name: 'Mike Johnson', tpNumber: '555-555-555' },
-        { name: 'Emily Davis', tpNumber: '444-444-444' },
-        { name: 'John Doe', tpNumber: '123-456-789' },
-        { name: 'Jane Smith', tpNumber: '987-654-321' },
-        { name: 'Mike Johnson', tpNumber: '555-555-555' },
+export default function Admin() {
+    const [admins, setAdmins] = useState([
+        { name: 'Alice Cooper', tpNumber: '123-456-789' },
+        { name: 'Bob Marley', tpNumber: '987-654-321' },
+        { name: 'Charlie Brown', tpNumber: '555-555-555' },
+        { name: 'Diana Prince', tpNumber: '444-444-444' },
     ]);
     const [searchTerm, setSearchTerm] = useState("");
-    const [clientToDelete, setClientToDelete] = useState(null);
+    const [adminToDelete, setAdminToDelete] = useState(null);
 
-    const totalClients = clients.length;
+    const totalAdmins = admins.length;
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
 
-    const handleDeleteClick = (client) => {
-        setClientToDelete(client);
+    const handleDeleteClick = (admin) => {
+        setAdminToDelete(admin);
     };
 
     const confirmDelete = () => {
-        if (clientToDelete) {
-            const clientName = clientToDelete.name;
-            setClients(clients.filter(client => client !== clientToDelete));
-            setClientToDelete(null);
+        if (adminToDelete) {
+            const adminName = adminToDelete.name;
+            setAdmins(admins.filter(admin => admin !== adminToDelete));
+            setAdminToDelete(null);
             
             setTimeout(() => {
-                alert(`${clientName} deleted successfully!`);
-            }, 0); // Ensures the modal is closed before showing the alert
+                alert(`${adminName} deleted successfully!`);
+            }, 0);
         }
     };
 
     const cancelDelete = () => {
-        setClientToDelete(null);
+        setAdminToDelete(null);
     };
 
-    const filteredClients = clients.filter(client =>
-        client.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        client.tpNumber.includes(searchTerm)
+    const filteredAdmins = admins.filter(admin =>
+        admin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        admin.tpNumber.includes(searchTerm)
     );
 
     return (
         <div>
             <Navi/>
             <Sidebar/>
-            <div className="total-clients-card">
-                <div className="total-clients-number">{totalClients}</div>
-                <div className="total-clients-text">Total Admins</div>
-                <div className="total-clients-icon">&#128101;</div> {/* Users icon */}
+            <div className="total-admins-card">
+                <div className="total-admins-number">{totalAdmins}</div>
+                <div className="total-admins-text">Total Admins</div>
+                <div className="total-admins-icon">&#128101;</div> {/* Users icon */}
             </div>
 
             <div className="search-container">
                 <input
                     type="text"
-                    placeholder="Search Admin..."
+                    placeholder="Search admin..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     className="search-bar"
                 />
+                <h2 className="admindetails">Admin Details</h2> {/* Changed class name */}
             </div>
 
-            <div className="clients-table-container">
-                <h2 className="clientdetails">Admin Details</h2>
-                <table className="clients-table">
+            <div className="admins-table-container">
+                <table className="admins-table">
                     <thead>
                         <tr>
                             <th>Admin Name</th>
@@ -78,14 +75,14 @@ export default function Client() {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredClients.map((client, index) => (
-                            <tr key={index} className="client-row">
-                                <td>{client.name}</td>
-                                <td>{client.tpNumber}</td>
+                        {filteredAdmins.map((admin, index) => (
+                            <tr key={index} className="admin-row">
+                                <td>{admin.name}</td>
+                                <td>{admin.tpNumber}</td>
                                 <td>
                                     <button
                                         className="action-button delete-button"
-                                        onClick={() => handleDeleteClick(client)}
+                                        onClick={() => handleDeleteClick(admin)}
                                     >
                                         &#128465; {/* Delete icon */}
                                     </button>
@@ -96,10 +93,10 @@ export default function Client() {
                 </table>
             </div>
 
-            {clientToDelete && (
+            {adminToDelete && (
                 <div className="confirmation-modal">
                     <div className="modal-content">
-                        <p>Are you sure you want to delete {clientToDelete.name}?</p>
+                        <p>Are you sure you want to delete {adminToDelete.name}?</p>
                         <button className="confirm-button" onClick={confirmDelete}>Yes</button>
                         <button className="cancel-button" onClick={cancelDelete}>No</button>
                     </div>
