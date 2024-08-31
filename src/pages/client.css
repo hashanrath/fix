@@ -8,9 +8,9 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: -600px;
-    margin-left: 300px;
-    position: relative;
+    position: absolute;
+    top: 150px;
+    left: 300px;
 }
 
 .total-clients-number {
@@ -29,13 +29,14 @@
 }
 
 .search-container {
-    margin-top: -120px;
-    margin-left: 900px;
+    position: absolute;
+    top: 500px;
+    right: 20px;
     text-align: center;
 }
 
 .search-bar {
-    width: 30%;
+    width: 300px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -44,18 +45,17 @@
 }
 
 .clients-table-container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
+    margin-top: 150px;
 }
 
 .clients-table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    margin-left: 200px;
-    table-layout: fixed;
+    margin-top: -500px;
+    margin-left: 100px;
 }
 
 .clients-table th, .clients-table td {
@@ -65,7 +65,7 @@
 }
 
 .clients-table th {
-    background-color: #f2f2f2;
+    background-color: #0e9cf479;
     font-weight: bold;
     position: sticky;
     top: 0;
@@ -116,10 +116,6 @@
     color: blue;
 }
 
-.clientdetails {
-    margin-top: 100px;
-    margin-left: 120px;
-}
 
 /* Style for the confirmation modal overlay */
 .confirmation-modal {
@@ -180,4 +176,13 @@
 
 .cancel-button:hover {
     background-color: #b3b3b3;
+}
+
+.clientdetails {
+    margin-top: 150px;
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
 }

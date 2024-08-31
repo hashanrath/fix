@@ -68,10 +68,12 @@ export default function Client() {
                     onChange={handleSearchChange}
                     className="search-bar"
                 />
+                  <h2 className="clientdetails">Clients Details</h2> {/* Moved to this position */}
             </div>
 
+          
+
             <div className="clients-table-container">
-                <h2 className="clientdetails">Clients Details</h2>
                 <table className="clients-table">
                     <thead>
                         <tr>
