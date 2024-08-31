@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar.js";
 import Dashboard from './pages/Dashboard.js';
 import Client from "./pages/Client.js";
 import Admin from "./pages/Admin.js";
+import Request from "./pages/Request.js";
 
 function App(){
   return(
@@ -19,6 +20,7 @@ function App(){
       <Route path="/dashboard" element={<Dashboard/>}></Route>
       <Route path="/client" element={<Client/>}></Route>
       <Route path="/admin" element={<Admin/>}></Route>
+      <Route path="/request" element={<Request/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
