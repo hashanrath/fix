@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './client.css';
+import './admin.css';
 import Navi from '../components/Navi';
 import Sidebar from '../components/Sidebar';
 
@@ -12,9 +12,6 @@ export default function Client() {
         { name: 'John Doe', tpNumber: '123-456-789' },
         { name: 'Jane Smith', tpNumber: '987-654-321' },
         { name: 'Mike Johnson', tpNumber: '555-555-555' },
-        { name: 'Mike Johnson', tpNumber: '555-555-555' },
-        { name: 'Emily Davis', tpNumber: '444-444-444' },
-        { name: 'John Doe', tpNumber: '123-456-789' },
     ]);
     const [searchTerm, setSearchTerm] = useState("");
     const [clientToDelete, setClientToDelete] = useState(null);
@@ -56,14 +53,14 @@ export default function Client() {
             <Sidebar/>
             <div className="total-clients-card">
                 <div className="total-clients-number">{totalClients}</div>
-                <div className="total-clients-text">Total Clients</div>
+                <div className="total-clients-text">Total Admins</div>
                 <div className="total-clients-icon">&#128101;</div> {/* Users icon */}
             </div>
 
             <div className="search-container">
                 <input
                     type="text"
-                    placeholder="Search client..."
+                    placeholder="Search Admin..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     className="search-bar"
@@ -71,11 +68,11 @@ export default function Client() {
             </div>
 
             <div className="clients-table-container">
-                <h2 className="clientdetails">Clients Details</h2>
+                <h2 className="clientdetails">Admin Details</h2>
                 <table className="clients-table">
                     <thead>
                         <tr>
-                            <th>Client Name</th>
+                            <th>Admin Name</th>
                             <th>Tp Number</th>
                             <th>Action</th>
                         </tr>

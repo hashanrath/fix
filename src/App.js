@@ -6,6 +6,7 @@ import Navi from './components/Navi.js';
 import Sidebar from "./components/Sidebar.js";
 import Dashboard from './pages/Dashboard.js';
 import Client from "./pages/Client.js";
+import Admin from "./pages/Admin.js";
 
 function App(){
   return(
@@ -17,6 +18,7 @@ function App(){
       <Route path="/sidebar" element={<Sidebar/>}></Route>
       <Route path="/dashboard" element={<Dashboard/>}></Route>
       <Route path="/client" element={<Client/>}></Route>
+      <Route path="/admin" element={<Admin/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
