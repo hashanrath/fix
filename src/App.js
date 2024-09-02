@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard.js';
 import Client from "./pages/Client.js";
 import Admin from "./pages/Admin.js";
 import Request from "./pages/Request.js";
+import Ongoing from "./pages/Ongoing.js";
 
 function App(){
   return(
@@ -21,6 +22,8 @@ function App(){
       <Route path="/client" element={<Client/>}></Route>
       <Route path="/admin" element={<Admin/>}></Route>
       <Route path="/request" element={<Request/>}></Route>
+      <Route path="/ongoing" element={<Ongoing/>}></Route>
+
       </Routes>
       </BrowserRouter>
     </div>
