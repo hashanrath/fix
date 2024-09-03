@@ -1,0 +1,96 @@
+.message-content {
+    margin-left: 220px; /* Adjust based on your Sidebar width */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .unread-messages {
+    background-color: #d8b96d;
+    margin-top: -600px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .unread-count span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .message-search {
+    margin-bottom: 70px;
+    width: 150px;
+    margin-left: 1000px;
+    
+  }
+  
+  .message-search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1000px;
+  }
+  
+  .message-item {
+    display: flex;
+    align-items: center;
+    background-color: #f5ee3e;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message-icon {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .message-text {
+    flex-grow: 1;
+    font-size: 18px;
+  }
+  
+  .message-status {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  
+  .message-time, .message-date {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .message-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-button, .delete-button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .delete-button {
+    color: red;
+  }
+  
