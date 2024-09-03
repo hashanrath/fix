@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './sidebar.css';
 import flogo from "../images/logo.jpg";
 
@@ -17,7 +17,7 @@ function Sidebar() {
         setTimeout(() => {
             navigate(path);
             setIsLoading(false);
-        }, 1000); // Simulate loading time (1 second)
+        }, 1000); 
     };
 
     return (

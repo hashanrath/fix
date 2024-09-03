@@ -12,6 +12,7 @@ import Ongoing from "./pages/Ongoing.js";
 import Service from "./pages/Service.js";
 import Complete from "./pages/Complete.js";
 import Searchreq from "./components/Searchreq.js";
+import Message from "./pages/Message.js";
 
 
 function App(){
@@ -30,6 +31,7 @@ function App(){
       <Route path="/service" element={<Service/>}></Route>
       <Route path="/complete" element={<Complete/>}></Route>
       <Route path="/searchreq" element={<Searchreq/>}></Route>
+      <Route path="/message" element={<Message/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
