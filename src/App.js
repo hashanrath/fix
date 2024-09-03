@@ -9,6 +9,8 @@ import Client from "./pages/Client.js";
 import Admin from "./pages/Admin.js";
 import Request from "./pages/Request.js";
 import Ongoing from "./pages/Ongoing.js";
+import Service from "./pages/Service.js";
+
 
 function App(){
   return(
@@ -23,7 +25,7 @@ function App(){
       <Route path="/admin" element={<Admin/>}></Route>
       <Route path="/request" element={<Request/>}></Route>
       <Route path="/ongoing" element={<Ongoing/>}></Route>
-
+      <Route path="/service" element={<Service/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
