@@ -10,6 +10,7 @@ import Admin from "./pages/Admin.js";
 import Request from "./pages/Request.js";
 import Ongoing from "./pages/Ongoing.js";
 import Service from "./pages/Service.js";
+import Complete from "./pages/Complete.js";
 
 
 function App(){
@@ -26,6 +27,7 @@ function App(){
       <Route path="/request" element={<Request/>}></Route>
       <Route path="/ongoing" element={<Ongoing/>}></Route>
       <Route path="/service" element={<Service/>}></Route>
+      <Route path="/complete" element={<Complete/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>

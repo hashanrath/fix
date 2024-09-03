@@ -5,15 +5,13 @@ import Sidebar from '../components/Sidebar';
 
 export default function Request() {
   const [activeTab, setActiveTab] = useState('requests');
-  const [searchQuery, setSearchQuery] = useState('');
+  
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
 
-  const handleSearch = (e) => {
-    setSearchQuery(e.target.value.toLowerCase());
-  };
+
 
   const requests = [
     { id: 1, name: 'Request 01', title: '', category: '', location: '', description: '' },
@@ -27,31 +25,21 @@ export default function Request() {
       <Navi />
       <Sidebar />
       <div className="tabs">
-        <button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
+        <a href='/Request'><button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
           Requests
-        </button>
-        <button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
+        </button></a>
+        <a href='/Ongoing'><button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
           Ongoing
-        </button>
-        <button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
+        </button></a>
+        <a href='/Complete'><button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
           Completed
-        </button>
+        </button></a>
       </div>
 
-      <div className="search-bar">
-        <input
-          type="text"
-          id="search"
-          placeholder="Find Request"
-          value={searchQuery}
-          onChange={handleSearch}
-        />
-        <button>🔍</button>
-      </div>
 
       <div id="requests" className={`tab-content ${activeTab === 'requests' ? 'active' : ''}`}>
         {requests
-          .filter((request) => request.name.toLowerCase().includes(searchQuery))
+          .filter((request) => request.name.toLowerCase())
           .map((request) => (
             <div key={request.id} className="request-card">
               <h3>{request.name}</h3>

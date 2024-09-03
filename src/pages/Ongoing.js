@@ -26,15 +26,15 @@ export default function Ongoing() {
           <Navi/>
           <Sidebar/>
           <div className="tabs">
-          <button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
+          <a href='/Request'><button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
             Requests
-          </button>
-          <button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
+          </button></a>
+          <a href='/Ongoing'><button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
             Ongoing
-          </button>
-          <button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
+          </button></a>
+          <a href='/Complete'><button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
             Completed
-          </button>
+          </button></a>
         </div>
           <div className="ongoing-request-card">
           <h3>Request 01</h3>
