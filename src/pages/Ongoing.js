@@ -52,7 +52,7 @@ export default function Ongoing() {
                         <span>{step}</span>
                       </div>
                     )}
-                    {index + 1}
+                    <div className="step-number">{index + 1}</div>
                   </div>
                 ))}
               </div>

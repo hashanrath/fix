@@ -11,6 +11,7 @@ import Request from "./pages/Request.js";
 import Ongoing from "./pages/Ongoing.js";
 import Service from "./pages/Service.js";
 import Complete from "./pages/Complete.js";
+import Searchreq from "./components/Searchreq.js";
 
 
 function App(){
@@ -28,6 +29,7 @@ function App(){
       <Route path="/ongoing" element={<Ongoing/>}></Route>
       <Route path="/service" element={<Service/>}></Route>
       <Route path="/complete" element={<Complete/>}></Route>
+      <Route path="/searchreq" element={<Searchreq/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
