@@ -1,0 +1,88 @@
+
+  .service-header {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 500px;
+    margin-left: 500px;
+    margin-top: -680px;
+  }
+  
+  .service-header h2 {
+    font-size: 24px;
+    color: #f2f1ee;
+    background: linear-gradient(to bottom right, #ff0, rgb(13, 13, 13));
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 650px;
+    padding: 8px;
+    width: 250px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 400px;
+    width: 1200px;
+    margin-left: 100px;
+    overflow-y: auto;
+  }
+  
+  .service-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .service-box {
+    width: 50%;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background: linear-gradient(to bottom right, #ff0, rgb(37, 231, 111));
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-box h3 {
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .service-box p {
+    margin: 5px 0;
+  }
+  
+  .assign-button {
+    padding: 10px 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   margin-left: 300px;
+  }
+  
+  .assign-button:hover {
+    background-color: #1976D2;
+  }
+  
