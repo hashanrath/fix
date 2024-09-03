@@ -16,7 +16,7 @@ export default function Request() {
   const requests = [
     { id: 1, name: 'Request 01', title: '', category: '', location: '', description: '' },
     { id: 2, name: 'Request 02', title: '', category: '', location: '', description: '' },
-    { id: 3, name: 'Request 03', title: '', category: '', location: '', description: '' },
+    
 
   ];
 
@@ -48,7 +48,7 @@ export default function Request() {
               <p>Location: {request.location}</p>
               <p>Description: {request.description}</p>
               <div className="actions">
-                <button className="delete-button">🗑️</button>
+                <button className="delete-button">Delete</button>
                 <button className="start-button">Start</button>
               </div>
             </div>
