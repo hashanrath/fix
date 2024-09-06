@@ -34,7 +34,12 @@
     right: 20px;
     text-align: center;
 }
-
+.clientdetails{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    text-align: center;
+}
 .search-bar {
     width: 300px;
     padding: 10px;
@@ -65,7 +70,7 @@
 }
 
 .clients-table th {
-    background-color: #0e9cf479;
+    background-color: #e1f40e79;
     font-weight: bold;
     position: sticky;
     top: 0;

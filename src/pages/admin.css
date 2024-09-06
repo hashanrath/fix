@@ -30,10 +30,15 @@
 
 .search-container {
     position: absolute;
-    top: 500px;
+    top: 200px;
     right: 20px;
     text-align: center;
 }
+.admindetails{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    text-align: center;}
 
 .search-bar {
     width: 300px;
@@ -65,7 +70,7 @@
 }
 
 .admins-table th {
-    background-color: #0e9cf479;
+    background-color: #e1f40e79;
     font-weight: bold;
     position: sticky;
     top: 0;
