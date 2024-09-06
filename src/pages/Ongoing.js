@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './ongoing.css';
 import Navi from '../components/Navi';
 import Sidebar from '../components/Sidebar';
+import Tab from '../components/Tab'
 
 export default function Ongoing() {
-    const [currentStep, setCurrentStep] = useState(2); 
-    const [activeTab, setActiveTab] = useState('ongoing'); 
+    const [currentStep, setCurrentStep] = useState(2);  
 
     const steps = ["Basket", "Delivery", "Confirm", "Done!"];
   
@@ -17,25 +17,12 @@ export default function Ongoing() {
       setCurrentStep((prevStep) => Math.max(prevStep - 1, 1));
     };
 
-    const handleTabClick = (tabName) => {
-      setActiveTab(tabName);
-    };
   
     return (
       <div>
           <Navi/>
           <Sidebar/>
-          <div className="tabs">
-          <a href='/Request'><button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
-            Requests
-          </button></a>
-          <a href='/Ongoing'><button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
-            Ongoing
-          </button></a>
-          <a href='/Complete'><button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
-            Completed
-          </button></a>
-        </div>
+          <Tab/>
           <div className="ongoing-request-card">
           <h3>Request 01</h3>
           <p className="ongoing-description">Description...........................................................................</p>

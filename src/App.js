@@ -13,6 +13,8 @@ import Service from "./pages/Service.js";
 import Complete from "./pages/Complete.js";
 import Searchreq from "./components/Searchreq.js";
 import Message from "./pages/Message.js";
+import Tab from "./components/Tab.js";
+
 
 
 function App(){
@@ -32,6 +34,8 @@ function App(){
       <Route path="/complete" element={<Complete/>}></Route>
       <Route path="/searchreq" element={<Searchreq/>}></Route>
       <Route path="/message" element={<Message/>}></Route>
+      <Route path="/tab" element={<Tab/>}></Route>
+      
       </Routes>
       </BrowserRouter>
     </div>

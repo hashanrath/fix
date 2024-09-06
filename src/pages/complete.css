@@ -9,7 +9,7 @@
     width: 200px;
     left: 350px;
     position: absolute;
-    top: 250px;
+    top: 350px;
   }
   
   .notification-content {
@@ -60,7 +60,7 @@
   .notification-card{
     width: 1200px;
     height: 100px;
-    top: 350px;
+    top: 450px;
     position: absolute;
     left: 350px;
   }
