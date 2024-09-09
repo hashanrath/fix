@@ -1,31 +1,63 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";  // Import Axios
 import "../pages/login.css";
 import flogo from "../images/logo.jpg";
 
 function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");  // For showing errors
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsLoading(true);
-    setProgress(0);
-    let progressInterval = setInterval(() => {
-        setProgress((oldProgress) => {
-            if (oldProgress >= 100) {
-                clearInterval(progressInterval);
-                navigate("/dashboard");
-                setIsLoading(false);
-                return 100;
-            }
-            return Math.min(oldProgress + (100 / 50), 100); // 50 steps to complete in 5 seconds
-        });
-    }, 100); // 100ms interval, 50 steps for 5 seconds total
-};
+    const formData = new FormData(event.target);
+    const username = formData.get("username");
+    const password = formData.get("password");
 
+    setErrorMessage(""); // Clear previous errors
 
+    try {
+      // Send login credentials to the backend using Axios
+      const response = await axios.post("http://localhost:3001/admin/get", {
+        username,
+        password,
+      });
+
+      // If login is successful and JWT is received
+      if (response.data.token) {
+        localStorage.setItem("token", response.data.token); // Save the token
+        setIsLoading(true); // Start loading spinner for successful login
+
+        setTimeout(() => {
+          // Navigate to dashboard after showing success alert
+          if (window.confirm(`Login successful! Welcome, ${username}. Click OK to proceed to the dashboard.`)) {
+            navigate("/dashboard");
+          }
+          setIsLoading(false);
+        }, 2000); // Simulate delay before redirect
+      }
+    } catch (error) {
+      setIsLoading(false);  // Ensure loading stops in case of an error
+      if (error.response && error.response.data) {
+        alert(error.response.data.error || "Login failed! Invalid credentials.");
+        setErrorMessage(error.response.data.error || "Login failed!");
+      } else {
+        alert("Server is not responding. Please try again later.");
+        setErrorMessage("Server is not responding. Please try again later.");
+      }
+    }
+  };
+
+  const handleRegisterClick = () => {
+    setIsLoading(true); // Show spinner when "REGISTER HERE" is clicked
+
+    // Simulate delay before redirecting
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/register");  // Redirect to the registration page after 2 seconds
+    }, 2000); // 2-second delay for spinner
+  };
 
   return (
     <div>
@@ -55,16 +87,22 @@ function LoginPage() {
             <button type="submit" className="login-btn">Log In</button>
           </form>
           <p>
-            Don't have an account? <a href="/register">REGISTER HERE</a>
+            Don't have an account?{" "}
+            <span 
+              className="register-link" 
+              onClick={handleRegisterClick} 
+              style={{ color: "#fda085", cursor: "pointer" }}
+            >
+              REGISTER HERE
+            </span>
           </p>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
       </div>
       {isLoading && (
-        <div className="loading-overlay1">
-          <div className="loading-bar1">
-            <div className="loading-progress1" style={{ width: `${progress}%` }}></div>
-          </div>
-          <p>Login please wait!...</p>
+        <div className="loading-spinner">
+          <div className="spinner"></div>
+          <p>Loading, please wait...</p>
         </div>
       )}
     </div>

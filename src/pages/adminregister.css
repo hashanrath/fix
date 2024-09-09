@@ -1,0 +1,94 @@
+.register-container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    height: 500px;
+    margin: 50px auto;
+    margin-top: 150px;
+    border-radius: 25px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .register-left {
+    flex: 1;
+    background: linear-gradient(135deg, #0b0b0b 50%, #fff200 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .register-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .register-right {
+    flex: 1.5;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .register-right h2 {
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: gray;
+  }
+  
+  .input-container input {
+    width: 90%;
+    padding: 10px 10px 10px 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .register-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #0b0b0b 50%, #fff200 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #fda085;
+  }
+  
+  .password-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+  
