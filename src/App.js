@@ -14,6 +14,8 @@ import Complete from "./pages/Complete.js";
 import Searchreq from "./components/Searchreq.js";
 import Message from "./pages/Message.js";
 import Adminregister from "./pages/Adminregister.js";
+import Tab from "./components/Tab.js";
+
 
 
 function App(){
@@ -34,6 +36,8 @@ function App(){
       <Route path="/searchreq" element={<Searchreq/>}></Route>
       <Route path="/message" element={<Message/>}></Route>
       <Route path="/register" element={<Adminregister/>}></Route>
+      <Route path="/tab" element={<Tab/>}></Route>
+      
       </Routes>
       </BrowserRouter>
     </div>

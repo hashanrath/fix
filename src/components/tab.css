@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: -600px; /* Adjusted margin */
+    left: 300px;
+    position: absolute; /* Changed from absolute to relative */
+}
+
+.tab-button {
+    background-color: #050505;
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #e2e928;
+    color: #050505;
+}
+
+.tab-content {
+    display: none;
+    padding: 60px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}

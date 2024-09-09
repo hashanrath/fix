@@ -1,30 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './complete.css';
 import Navi from '../components/Navi';
 import Sidebar from '../components/Sidebar';
+import Tab from '../components/Tab';
 
 export default function Complete() {
-    const [activeTab, setActiveTab] = useState('completed'); // Set initial active tab to 'completed'
-
-    const handleTabClick = (tabName) => {
-      setActiveTab(tabName);
-    };
-  
+    
     return (
       <div>
           <Navi/>
           <Sidebar/>
-          <div className="tabs">
-          <a href='/Request'><button className={`tab-button ${activeTab === 'requests' ? 'active' : ''}`} onClick={() => handleTabClick('requests')}>
-            Requests
-          </button></a>
-          <a href='/Ongoing'><button className={`tab-button ${activeTab === 'ongoing' ? 'active' : ''}`} onClick={() => handleTabClick('ongoing')}>
-            Ongoing
-          </button></a>
-          <a href='/Complete'><button className={`tab-button ${activeTab === 'completed' ? 'active' : ''}`} onClick={() => handleTabClick('completed')}>
-            Completed
-          </button></a>
-       </div>
+          <Tab/>
        <div className="notification-tab">
       <div className="notification-content">
         <span className="notification-number">12</span>
